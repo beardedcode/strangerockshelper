@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Strange Rock Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="tips-wrapper">
+      <h3 onclick="readAllTips()">Tips</h3>
+
+      <ul>
+        <li onclick="speakText('Always wear relevant skillcape.')">Always wear relevant skill cape.</li>
+        <li
+          onclick="speakText('Get the first Strange rock, change skill and come back after obtaining a different one.')">
+          Get the first Strange or Golden rock, change skill and come back after obtaining a different one.</li>
+        <li onclick="speakText('More likely to get golden rocks in Prifddinas.')">More likely to get golden rocks in
+          Prifddinas.</li>
+        <li
+          onclick="speakText('Crystal tools for Smithing, Construction, Firemaking, Mining, Woodcutting, Fletching, and Fishing.')">
+          Crystal tools for Smithing, Construction, Firemaking, Mining, Woodcutting, Fletching, and Fishing.</li>
+        <li onclick="speakText('Metamorphic geodes give guaranteed rocks.')">Metamorphic geodes give guaranteed rocks.
+        </li>
+      </ul>
+<button onclick="checkAndReadUncheckedRows()">Rocks &#128266</button>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Strange Rocks</th>
+            <th>Golden Rocks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell1">Agility – Throne room bikes</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell2">Agility – Throne room bikes</td>
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell3">Construction – Dream of Iaia(Stone)
+              / Flatpacks</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell4">Construction – Dream of Iaia(Stone)
+              / Flatpacks</td>
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell5">Cooking – Cook</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell6">Crafting – Dream of Iaia(hides) /
+              Sandstone</td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell7">Crafting – Dream of Iaia(hides) /
+              Sandstone</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell8">Divination – Colony with conversion
+              relic</td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell9">Farming – Accidental skilling egg
+              station</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell10">Dungeoneering – ED2 Slimes / ED3
+              trash runs</td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell11">Firemaking – Accidental skilling
+              until all Farming rocks then Bonfires</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell12">Farming – Accidental skilling egg
+              station</td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell13">Fishing – Dream of Iaia(clay) /
+              Menaphos VIP</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell14">Herblore – Dream of Iaia(Leaves) /
+              Grimy herbs</td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell15">Fletching – Dream of Iaia(wood) /
+              Tipping arrows/darts</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell16">Magic – Pyrefiends / ED3 trash runs
+            </td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell17">Herblore – Dream of Iaia(Leaves) /
+              Grimy herbs</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell18">Melee – ED2 Slimes / Abby demons
+              whilst Slayer rock hunting / ED3 trash runs</td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell19">Hunter – Dream of Iaia(vines) /
+              Croesus front</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell20">Mining – Geode farming / Seren
+              Stones</td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell21">Mining – Geode farming / Seren
+              Stones</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell22">Prayer – Burial Powders /
+              Bonecrusher or in Lumbridge catacombs</td>
+
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell23">Runecrafting – Wicked hood</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell24">Ranged – Turoths / ED3 trash runs</td>
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell25">Smithing – Artisan’s workshop</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell26">Slayer – Abby demons using mask or
+              slayer contracts
+            </td>
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell27">Thieving – Prif</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell28">Smithing – Artisan’s workshop</td>
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell29">Woodcutting – Ivy (Crwys)</td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell30">Summoning – Prif</td>
+          </tr>
+          <tr>
+            <td onclick="toggleCellColor(this)" class="strange" data-cell-id="cell31"></td>
+            <td onclick="toggleCellColor(this)" class="golden" data-cell-id="cell32">Woodcutting – Ivy (Crwys)</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div class="reset-button">
+        <button onclick="resetRows()">&#10226;</button>
+        
+      </div>
+    </div>
+
+    <script src="content.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      
+// Function to check and read unchecked rows
+function checkAndReadUncheckedRows() {
+  const rows = document.querySelectorAll('.table-wrapper tbody tr');
+
+  rows.forEach(row => {
+    const strangeCell = row.querySelector('.strange');
+    const goldenCell = row.querySelector('.golden');
+
+    if (!(strangeCell.classList.contains('checked') && goldenCell.classList.contains('checked'))) {
+      const strangeText = strangeCell.innerText.split(' ')[0];
+      const goldenText = goldenCell.innerText.split(' ')[0];
+
+      if (!strangeCell.classList.contains('checked')) {
+        speakText(strangeText);
+      }
+
+      if (!goldenCell.classList.contains('checked')) {
+        speakText(goldenText);
+      }
+    }
+  });
+}
+
+
+      // Rest of the code
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
