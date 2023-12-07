@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(24, 24, 24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: inherit;
+}
+
+.table-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  border-radius: 10px;
+  overflow: auto;
+  /* Add scrollbars if needed */
+  background: linear-gradient(160deg, rgba(253, 252, 251, 1) 0%, rgba(226, 209, 195, 1) 100%);
+}
+
+table {
+  width: 100%;
+  table-layout: fixed; /* Added this line to fix the table layout */
+  border-collapse: collapse;
+  font-size: 17px;
+  /* Increase the font size for better readability */
+  padding: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  /* Add borders between cells */
+}
+
+tr {
+  cursor: pointer;
+  width: 100%; /* Added this line to set the width of table rows */
+}
+tr.hidden {
+  display: none;
+}
+
+
+th {
+  background-color: rgb(239, 230, 222);
+  font-weight: bold;
+  color: #191919;
+  font-size: 20px;
+  cursor: default;
+  border-bottom: 5px solid rgb(18, 18, 18);
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+  /* Alternate background color for even rows */
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+  /* Background color for odd rows */
+}
+
+td.strange.checked {
+  background-color: #626262;
+  color: #888888;
+  text-decoration: line-through;
+}
+
+td.golden.checked {
+  background-color: #d4af37;
+  color: #888888;
+  text-decoration: line-through;
+}
+
+
+.tips-wrapper {
+  width: 30%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 2;
+  min-width: 30%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: auto;
+  /* Add scrollbars if needed */
+  background: rgb(253, 252, 251);
+  background: linear-gradient(160deg, rgba(253, 252, 251, 1) 0%, rgba(226, 209, 195, 1) 100%);
+}
+
+.tips-title {
+  margin-bottom: 10px;
+}
+
+.tips-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.tips-list li {
+  margin-bottom: 15px;
+}
+
+.tips-wrapper li {
+  font-weight: 300;
+}
+
+.tips-wrapper li:hover {
+  font-weight: 600;
+}
+
+.tips-list li:hover {
+  font-weight: bold;
+  /* Make the list item bold on hover */
+}
+
+.tips-wrapper h3 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.tips-wrapper li.reading {
+  font-weight: bold;
+}
+
+.tips-wrapper h3.reading {
+  color: rgb(151, 24, 24);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width:90%;
+}
+
+.reset-button {
+  text-align: center;
+  margin-top: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+.reset-button button {
+  border-radius: 0px;
+  display: inline-block;
+  background: transparent;
+  padding: 10px;
+  border: 0px solid #242424;
+  height: 100%;
+  color: #333;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.reset-button button:hover {
+  background-color: #e1c9b8;
+  border: 0px solid black;
+}
+
+.reset-button button:focus {
+  outline: none;
+}
+
+.tips-wrapper button {
+  float: right;
+font-size: 18px;
+  background: #eaded4;
+  padding: 10px;
+  border: 2px solid black;
+   border-radius: 7px;
+}
+
+.tips-wrapper button:hover {
+
+  background: #dcc7b6;
+  padding: 10px;
+  border: 2px solid black;
+ 
+}
