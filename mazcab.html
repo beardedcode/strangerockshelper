@@ -14,7 +14,8 @@
             <a href="./mazcab.html">Mazcab Reputation</a>
         </div>
         <div class="tips-wrapper">
-            <h2>uwu</h2>
+            <a href="https://www.reddit.com/r/NemiForest/new/"><h2>Nemi Forest</h2></a>
+            <div id="nemiresult"></div>
         </div>
         <div class="content-wrapper">
             <h1>Mazcab Reputation Guide</h1>
@@ -63,8 +64,47 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-
 </html>
-</body>
+<script>
+    async function fetchData() {
+      try {
+        const response = await fetch('https://www.reddit.com/r/nemiforest/new.json?sort=new');
+        const data = await response.json();
 
+        // Extract the 'url_overridden_by_dest' and 'link_flair_css_class' fields from the first post
+        const firstPost = data.data.children[0].data;
+        const imageUrl = firstPost.url_overridden_by_dest;
+        const linkFlairCssClass = firstPost.link_flair_css_class;
+
+        // Display the link flair and clickable image on the webpage
+        const resultContainer = document.getElementById('nemiresult');
+
+        // Link Flair
+        const flairElement = document.createElement('p');
+        flairElement.textContent = `Status: ${linkFlairCssClass}`;
+        resultContainer.appendChild(flairElement);
+
+        // Clickable Image
+        const imageLinkElement = document.createElement('a');
+        imageLinkElement.href = imageUrl;  // Set the href attribute to the image URL
+        imageLinkElement.target = '_blank'; // Open the link in a new tab
+        const imageElement = document.createElement('img');
+        imageElement.src = imageUrl;
+        imageElement.alt = 'Latest Nemi Forest Post';
+
+        // Conditionally apply the 'greyed-out' class if linkFlairCssClass is 'depleted'
+        if (linkFlairCssClass === 'depleted') {
+          imageElement.classList.add('greyed-out');
+        }
+
+        imageLinkElement.appendChild(imageElement);
+        resultContainer.appendChild(imageLinkElement);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    fetchData();
+  </script>
+</body>
 </html>
