@@ -24,7 +24,7 @@
             </ul>
         </div>
         <div class="content-wrapper">
-            <h1>Fish Flingers Guide</h1><br>
+            <h1>Fish Flingers Guide</h1>
             <h2>Before Starting</h2>
             <p>
                     <p>1. Alt1 - Click ratings button and click read from screen at start to find fish locations.</p>
@@ -47,39 +47,8 @@
             <p>3. When all Big fish/assisted fish are done, just fish and wait for game end.
             </p>
         </div>
-
-        <script src="content.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script>
-            // Function to check and read unchecked rows
-            function checkAndReadUncheckedRows() {
-                const rows = document.querySelectorAll('.table-wrapper tbody tr');
-
-                rows.forEach(row => {
-                    const strangeCell = row.querySelector('.strange');
-                    const goldenCell = row.querySelector('.golden');
-
-                    if (!(strangeCell.classList.contains('checked') && goldenCell.classList.contains(
-                        'checked'))) {
-                        const strangeText = strangeCell.innerText.split(' ')[0];
-                        const goldenText = goldenCell.innerText.split(' ')[0];
-
-                        if (!strangeCell.classList.contains('checked')) {
-                            speakText(strangeText);
-                        }
-
-                        if (!goldenCell.classList.contains('checked')) {
-                            speakText(goldenText);
-                        }
-                    }
-                });
-            }
-
-
-            // Rest of the code
-        </script>
 </body>
-
 </html>
 </body>
 
