@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fish Flingers Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar">
+            <a href="./index.html">Strange Rocks</a>
+            <a href="./fishflingers.html">Fish Flingers</a>
+        </div>
+        <div class="tips-wrapper">
+            <h3>Useful Info</h3>
+            <ul>
+                <li>2 Medals for finding 6/6 tackles.</li>
+                <li>Medal for catching 3 Big fish.</li>
+                <li>Medal for assisting with 6 Big Fish.</li>
+                <li>Change Game messages to on (easier to see when caught Big Fish).</li>
+                <li>World 89 - Fish Flingers world</li>
+                <li>"ahelp" - Friend chat to check if people are playing</li>
+            </ul>
+        </div>
+        <div class="content-wrapper">
+            <h1>Fish Flingers Guide</h1><br>
+            <h2>Before Starting</h2>
+            <p>
+                <ul>
+                    <li>Alt1 - Click ratings button and click read from screen at start to find fish locations.</li>
+                    <li>Get hint from guy, and add to hint section.</li>
+                    <li>Other people will give hints, fill those in as well.</li>
+                </ul>
+            </p>
+            <h2>Game</h2>
+            <p>1. Click any Bait, Rod and Weight and click fish at Dock.</p>
+            <p>2. White boxes appear on fishing interface click those, change as they change till rating at 100%.</p>
+            <p>3. 100% rating means perfect tackle has been found and can move onto next area (some areas have 2 to find).</p>
+            <h3>When all tackles found</h3>
+            <p>
+               1. At Beach, try catch Big Fish and Assist with catching Big fish, to assist just click on bubbles that
+                appear<br><ul>
+                    <li>Big Fish can only be found at 100% rating</li>
+                    <li>3/3 Big Fish</li>
+                    <li>6/6 Assisted Big Fish</li>
+                </ul></p>
+            <p>2. When red bar at 96% move back to previous section keep eye out for Big Fish.</p>
+            <p>3. When all Big fish/assisted fish are done, just fish and wait for game end.
+            </p>
+        </div>
+
+        <script src="content.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            // Function to check and read unchecked rows
+            function checkAndReadUncheckedRows() {
+                const rows = document.querySelectorAll('.table-wrapper tbody tr');
+
+                rows.forEach(row => {
+                    const strangeCell = row.querySelector('.strange');
+                    const goldenCell = row.querySelector('.golden');
+
+                    if (!(strangeCell.classList.contains('checked') && goldenCell.classList.contains(
+                        'checked'))) {
+                        const strangeText = strangeCell.innerText.split(' ')[0];
+                        const goldenText = goldenCell.innerText.split(' ')[0];
+
+                        if (!strangeCell.classList.contains('checked')) {
+                            speakText(strangeText);
+                        }
+
+                        if (!goldenCell.classList.contains('checked')) {
+                            speakText(goldenText);
+                        }
+                    }
+                });
+            }
+
+
+            // Rest of the code
+        </script>
+</body>
+
+</html>
+</body>
+
+</html>

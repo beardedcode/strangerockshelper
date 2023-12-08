@@ -49,6 +49,25 @@ body {
   /* Add scrollbars if needed */
   background: linear-gradient(160deg, rgba(253, 252, 251, 1) 0%, rgba(226, 209, 195, 1) 100%);
 }
+.content-wrapper {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: inherit;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 100%;
+  border-radius: 10px;
+  overflow: auto;
+  flex-direction: column;
+  /* Add scrollbars if needed */
+  background: linear-gradient(160deg, rgba(253, 252, 251, 1) 0%, rgba(226, 209, 195, 1) 100%);
+}
+.content-wrapper p
+{
+  font-size: 18px;
+}
+
+
 
 table {
   width: 100%;
