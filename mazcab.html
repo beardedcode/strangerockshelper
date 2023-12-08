@@ -76,7 +76,7 @@ async function fetchData() {
     let linkFlairCssClass = firstPost.link_flair_css_class;
 
     // If linkFlairCssClass is null, set it to 'active'
-    if (!linkFlairCssClass) {
+    if (!linkFlairCssClass == "null") {
       linkFlairCssClass = 'active';
     }
 
