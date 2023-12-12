@@ -1,3 +1,38 @@
+/* Media queries for mobile devices */
+@media only screen and (max-width: 768px) {
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .table-wrapper,
+  .content-wrapper,
+  .tips-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .tips-wrapper {
+    margin-right: 0;
+  }
+
+  .reset-button {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .reset-button button {
+    width: 100%;
+  }
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: rgb(24, 24, 24);
