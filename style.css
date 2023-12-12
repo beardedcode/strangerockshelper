@@ -66,6 +66,9 @@ body {
 {
   font-size: 18px;
 }
+.content-wrapper a{
+text-decoration: none;
+}
 #nemiresult{
   height: auto;
 }
@@ -190,6 +193,10 @@ td.golden.checked {
 
 .tips-wrapper h3.reading {
   color: rgb(151, 24, 24);
+}
+.tips-wrapper img{
+  width: 80%;
+  height: auto;
 }
 
 .container {
