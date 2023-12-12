@@ -7,6 +7,12 @@
 
 @media only screen and (max-width: 600px) {
   /* Mobile styles */
+
+  .container{
+    width: 100%;
+    padding: 0px;
+    min-height: 100vh;
+  }
   .content-wrapper,
   .tips-wrapper {
     padding: 10px; /* Adjust padding for smaller screens */
