@@ -4,6 +4,13 @@
     width: 90%;
   }
 }
+@media only screen and (max-width: 600px) {
+  /* Mobile styles */
+  .container {
+    width: 100%;
+    padding: 0px;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   /* Mobile styles */
@@ -11,11 +18,10 @@
   .container{
     width: 100%;
     padding: 0px;
-    min-height: 100vh;
   }
   .content-wrapper,
   .tips-wrapper {
-    padding: 10px; /* Adjust padding for smaller screens */
+    padding: 0px; /* Adjust padding for smaller screens */
   }
 
   .reset-button {
@@ -65,15 +71,15 @@ body {
   display: flex;
   flex-direction: inherit;
   justify-content: center;
-  width: 100%;
   margin-top: 60px;
+  margin-bottom: 2.5%;
 }
 #navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #333333d1;
   overflow: hidden;
   z-index: 1000; /* Ensure the navbar appears above other content */
 }
@@ -88,7 +94,7 @@ body {
 }
 
 #navbar a:hover {
-  background-color: #ddd;
+  background-color: #e7e6e6;
   color: black;
 }
 
@@ -251,12 +257,6 @@ td.golden.checked {
 .tips-wrapper img{
   width: 80%;
   height: auto;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  width:90%;
 }
 
 .reset-button {
