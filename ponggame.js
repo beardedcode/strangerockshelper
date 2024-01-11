@@ -163,7 +163,7 @@ function resetGame() {
     ballY = 200;
     rightPaddleY = 160;*/
     score = 0;
-    lives = 3;
+    lives = 5;
     document.getElementById('score').innerText = score;
     document.getElementById('lives').innerText = lives;
 
