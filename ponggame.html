@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pong Game</title>
+    <style>
+        @font-face {
+            font-family: Rubik;
+            src: url('Oxanium-VariableFont_wght.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            font-family: 'Rubik', fallbackFont, sans-serif;
+        }
+
+        #startButton {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #ad3c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: absolute;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Rubik', fallbackFont, sans-serif;
+        }
+
+        #startButton:hover {
+            background-color: #641f1f;
+            /* Darker Green on hover */
+        }
+
+        .game-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background-color: #2c3e50;
+            /* Updated background color */
+            border: 2px solid #ecf0f1;
+            /* Updated border color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: inset 0px 10px 35px -1px rgba(0, 0, 0, 0.55);
+            background-size: cover;
+            border: solid rgba(0, 0, 0, 0) 2px;
+            /* Updated border color */
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .ball {
+            width: 20px;
+            height: 20px;
+            background-color: #d5ecfc;
+            /* Updated ball color */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: #2c3e50 2px solid;
+            /* Updated border color */
+            background-image: none;
+        }
+
+        .paddle {
+            width: 15px;
+            height: 80px;
+            position: absolute;
+            border-radius: 1px;
+        }
+
+        #leftPaddle {
+            left: 0;
+            margin-left: 10px;
+            background-color: #e74c3c;
+            /* Updated left paddle color */
+            overflow: hidden;
+        }
+
+        #rightPaddle {
+            right: 0;
+            margin-right: 10px;
+            background-color: #2ecc71;
+            /* Updated right paddle color */
+        }
+
+        .score-container {
+            color: #fff;
+            font-size: 20px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .bottom-score {
+            order: 2;
+            font-size: 26px;
+            margin-top: 5px;
+        }
+
+        .top-score {
+            order: 1;
+            color: rgb(186, 107, 107);
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-container">
+
+        <div class="ball"></div>
+        <div class="paddle" id="leftPaddle"></div>
+        <div class="paddle" id="rightPaddle"></div>
+        <div class="score-container">
+            <div>Lives: <span id="lives">5</span></div>
+            <div class="top-score">High Score: <span id="highScore">0</span></div>
+            <div class="bottom-score"><span id="score">0</span></div>
+        </div>
+    </div>
+    <button id="startButton" onclick="startGame()">Lets Play!</button>
+    <script src="ponggame.js"></script>
+</html>
