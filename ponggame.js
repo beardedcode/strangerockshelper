@@ -31,12 +31,12 @@ function update() {
     // Check collision with paddles
     if (
         (ballX <= 20 && ballY >= getPaddleTop(leftPaddle) && ballY <= getPaddleBottom(leftPaddle)) ||
-        (ballX >= 775 && ballY >= getPaddleTop(rightPaddle) && ballY <= getPaddleBottom(rightPaddle))
+        (ballX >= 780 && ballY >= getPaddleTop(rightPaddle) && ballY <= getPaddleBottom(rightPaddle))
     ) {
         ballSpeedX = -ballSpeedX;
 
         // Check if the ball hits the right paddle
-        if (ballX >= 775) {
+        if (ballX >= 780) {
             // Increment the score
             score++;
             
